@@ -7,3 +7,6 @@ https://www.nuget.org/packages/Inoxie.DataProcessor/
 
 # How to use
 TODO
+
+# License
+MIT
