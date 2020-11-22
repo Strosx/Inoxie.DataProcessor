@@ -49,8 +49,6 @@ namespace Inoxie.DataProcessor.Implementations
         private string ToQueryString(TFilter filter)
         {
             var url=  httpContextAccessor.HttpContext.Request.Path.Value;
-        //    var urlWithourQuery = String.Format("{0}{1}{2}{3}", url.Scheme,
-         //       Uri.SchemeDelimiter, url.Authority, url.AbsolutePath);
 
             return $"{url}?{GetQueryString(filter)}";
         }
@@ -61,7 +59,7 @@ namespace Inoxie.DataProcessor.Implementations
                              where p.GetValue(obj, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(obj, null).ToString());
 
-            return String.Join("&", properties.ToArray());
+            return string.Join("&", properties.ToArray());
         }
 
     }
